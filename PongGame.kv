@@ -1,0 +1,39 @@
+<Ball>
+    canvas:
+        Color:
+            rgba: 0.2, 0.2, 1, 1
+        Ellipse:
+            size: 40, 40
+            pos: self.pos
+
+<Paddle>
+    canvas:
+        Color:
+            rgba: 0, 0, 0, 1
+        Rectangle:
+            size: 12, 170
+            pos: self.pos
+
+<Frame>
+    canvas:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    Ball:
+        id: ball
+        pos: root.width/2 - self.width, 90
+
+    Paddle:
+        pos: 5, root.height/2- self.height /2
+        id: paddlee
+        size: 12, 170
+    Label:
+        id: score
+        text: '0'
+        color: 0, 0, 0, 1
+        font_size: 60
+        size: self.texture_size
+        pos: root.width/2 - self.width/2, root.height * 0.75
